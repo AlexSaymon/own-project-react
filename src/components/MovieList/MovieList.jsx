@@ -15,7 +15,7 @@ const MovieList = ({ movies }) => {
     getData();
   }, []);
 
-  if (!genres.length) return null; // Wait until genres are loaded
+  if (!genres.length) return null;
 
   return (
     <div className={s.container}>
@@ -35,11 +35,9 @@ const MovieList = ({ movies }) => {
                   {movie.genre_ids.slice(0, 2).map((id) => {
                     const genre = genres.find((g) => g.id === id);
                     return genre ? (
-                      <span className={s.hdSpan}>
-                        <li className={s.genres} key={genre.id}>
-                          {genre.name}
-                        </li>
-                      </span>
+                      <li className={s.genres} key={genre.id}>
+                        {genre.name}
+                      </li>
                     ) : null;
                   })}
                 </div>
