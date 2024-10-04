@@ -1,0 +1,32 @@
+.image {
+  width: 7%;
+  height: 7%;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.creditInfoWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.character {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.characterDescription {
+  font-size: 15px;
+}

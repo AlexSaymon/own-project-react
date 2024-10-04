@@ -1,0 +1,83 @@
+html,
+body,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.list {
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.listItem {
+  width: calc((100% - 96px) / 4);
+}
+
+.image {
+  border-radius: 10px;
+  width: 256px;
+  height: 344px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.title,
+.hd {
+  color: white;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.title {
+  width: 100px;
+  height: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 5px;
+}
+
+.movieInfoWrapper {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  align-items: flex-start; /* Align items to the start */
+}
+.hd {
+}
+
+.hdSpan {
+  background-color: #f00;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.genres {
+  color: #fff;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.genresWrapper {
+  display: flex;
+  align-content: end;
+  gap: 5px; /* Adjust gap as needed */
+}

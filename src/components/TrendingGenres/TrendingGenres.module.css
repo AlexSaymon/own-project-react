@@ -1,0 +1,14 @@
+.genresWrapper {
+  display: flex;
+  align-content: center;
+}
+
+.genres {
+  width: 51px;
+  height: 2px;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
