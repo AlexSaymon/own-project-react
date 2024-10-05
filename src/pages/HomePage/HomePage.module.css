@@ -1,23 +1,26 @@
+body {
+  background: #000;
+}
+
 .header {
   margin-left: 20px;
 }
 
 @media (min-width: 320px) {
   .container {
-    background: #000;
     width: 100%;
     /* padding-left: 80px;
   padding-right: 80px; */
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 

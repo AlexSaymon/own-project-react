@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import s from "./MovieList.module.css";
-import { fetchGenres } from "../../services/api"; // Import fetchGenres directly
+import { fetchGenres } from "../../services/api";
 
 const MovieList = ({ movies }) => {
   const location = useLocation();
@@ -26,12 +26,12 @@ const MovieList = ({ movies }) => {
               <img
                 className={s.image}
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt="trending movie"
+                alt={movie.title}
               />
               <div className={s.movieInfoWrapper}>
                 <p className={s.title}>{movie.title}</p>
 
-                <div className={s.genresWrapper}>
+                <ul className={s.genresList}>
                   {movie.genre_ids.slice(0, 2).map((id) => {
                     const genre = genres.find((g) => g.id === id);
                     return genre ? (
@@ -40,7 +40,7 @@ const MovieList = ({ movies }) => {
                       </li>
                     ) : null;
                   })}
-                </div>
+                </ul>
               </div>
             </Link>
           </li>

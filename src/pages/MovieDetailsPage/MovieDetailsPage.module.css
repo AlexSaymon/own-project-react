@@ -1,3 +1,28 @@
+@media (min-width: 320px) {
+  .container {
+    width: 100%;
+    /* padding-left: 80px;
+  padding-right: 80px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
 .contentWrapper {
   display: flex;
   border-bottom: 1px solid black;
@@ -33,17 +58,63 @@ h2 {
 
 * {
   font-weight: 400;
+  color: white;
 }
 
-li {
-  margin-bottom: 20px;
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
 }
 
-.title,
-.overviewTitle,
-.genresTitle {
+.title {
+  margin-top: 40px;
+  margin-bottom: 67px;
+  color: #fff;
+  font-size: 34px;
   font-weight: 600;
-  font-size: 20px;
+}
+
+.genresWrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.genres {
+  border-radius: 10px;
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 10px;
+}
+
+.releaseDate {
+  display: flex;
+  align-items: center;
+}
+
+.runTime {
+  display: flex;
+  align-items: center;
+}
+
+.calendarIcon {
+  margin-right: 10px;
+  margin-left: 28px;
+}
+
+.userscore {
+  display: flex;
+  align-items: center;
+}
+
+.scoreIcon {
+  margin-right: 10px;
+  margin-left: 28px;
 }
 
 .image {
@@ -52,26 +123,12 @@ li {
   margin: 10px 0px 10px 10px;
 }
 
-.list {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  margin-top: 80px;
-}
-
 .overview {
-  font-size: 15px;
-  margin-top: 20px;
-}
-
-.genresWrapper {
-  display: flex;
-  gap: 10px;
-}
-
-.genres {
-  margin-top: 20px;
-  margin-left: 10px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5em;
+  width: 708px;
+  margin-bottom: 44px;
 }
 
 .additionalInfo {
