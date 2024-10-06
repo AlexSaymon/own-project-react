@@ -1,10 +1,10 @@
 import Navigation from "../Navigation/Navigation";
 import s from "./Header.module.css";
 
-const Header = () => {
+const Header = ({ handleChangeQuery }) => {
   return (
     <div className={s.container}>
-      <Navigation />
+      <Navigation handleChangeQuery={handleChangeQuery} />
     </div>
   );
 };

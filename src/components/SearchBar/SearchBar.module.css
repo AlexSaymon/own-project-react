@@ -1,3 +1,50 @@
-.wrapper {
-  margin: 20px;
+@media (min-width: 320px) {
+  .wrapper {
+    position: relative;
+    display: flex;
+    align-content: center;
+  }
+
+  .button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    right: 10px;
+    top: 6px;
+  }
+
+  .field {
+    border-radius: 25px;
+    padding: 10px 10px 10px 15px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .field::placeholder {
+    color: #000;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .field {
+    width: 416px;
+    padding: 10px 10px 10px 25px;
+  }
+
+  .field:hover {
+    background-color: #e1d9d1;
+  }
+}
+
+.icon {
+  color: black;
+  font-size: 23px;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.icon:hover {
+  color: red;
 }

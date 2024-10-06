@@ -4,6 +4,7 @@ import { fetchMovieById } from "../../services/api";
 import s from "./MovieDetailsPage.module.css";
 import { GoArrowLeft, GoCalendar, GoHeart } from "react-icons/go";
 import RunTime from "../../components/RunTime/RunTime";
+import Loader from "../../components/Loader/Loader";
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -21,7 +22,12 @@ const MovieDetailsPage = () => {
     getData();
   }, [movieId]);
 
-  if (!movie) return <div>Loading...</div>;
+  if (!movie)
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
 
   const releaseDate = movie.release_date.split("-")[0];
 
@@ -62,18 +68,24 @@ const MovieDetailsPage = () => {
           <li>
             <p className={s.overview}>{movie.overview}</p>
           </li>
-          <li>
-            <p>Country:{movie.origin_country}</p>
-          </li>
-          <li>
-            <p>Country:{movie.origin_country}</p>
-          </li>
-          <li>
-            <p>Country:{movie.origin_country}</p>
-          </li>
-          <li>
-            <p>Country:{movie.origin_country}</p>
-          </li>
+          <div className={s.movieInfoWrapper}>
+            <li className={s.movieInfoItem}>
+              <p>Country : {movie.origin_country}</p>
+            </li>
+            <li className={s.movieInfoItem}>
+              <p>Release date : {movie.release_date}</p>
+            </li>
+            {movie.production_companies.slice(0, 1).map((production) => (
+              <li key={production.id} className={s.movieInfoItem}>
+                <p>Production : {production.name}</p>
+              </li>
+            ))}
+            <li className={s.movieInfoItem}>
+              <p>
+                Quality: <span className={s.hd}>HD</span>
+              </p>
+            </li>
+          </div>
         </ul>
       </div>
       <div className={s.additionalInfo}>

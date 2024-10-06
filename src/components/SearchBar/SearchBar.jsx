@@ -1,5 +1,6 @@
 import { Field, Formik, Form } from "formik";
 import s from "./SearchBar.module.css";
+import { GoSearch } from "react-icons/go";
 const SearchBar = ({ handleChangeQuery }) => {
   const initialValues = {
     query: "",
@@ -8,14 +9,19 @@ const SearchBar = ({ handleChangeQuery }) => {
   const handleSubmit = (values) => {
     handleChangeQuery(values.query);
   };
+
   return (
     <div className={s.wrapper}>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         {({ values }) => (
           <Form>
-            <Field name="query" />
-            <button type="submit" disabled={!values.query}>
-              Search
+            <Field
+              className={s.field}
+              name="query"
+              placeholder="Search movies..."
+            ></Field>
+            <button className={s.button} type="submit" disabled={!values.query}>
+              <GoSearch className={s.icon} />
             </button>
           </Form>
         )}
