@@ -6,8 +6,9 @@ const SearchBar = ({ handleChangeQuery }) => {
     query: "",
   };
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values, options) => {
     handleChangeQuery(values.query);
+    options.resetForm();
   };
 
   return (
