@@ -1,4 +1,85 @@
-.list {
+@media (min-width: 320px) {
+  .container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+
+  .image {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .listItem {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .noImage {
+    text-align: center;
+    width: 150px;
+    height: 200px;
+    margin: 90px auto 0px auto;
+    border-radius: 10px;
+  }
+  .creditInfo {
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .creditName {
+    margin: 10px 0px;
+  }
+}
+
+@media (min-width: 320px) {
+  .image {
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 16px;
+  }
+  .listItem {
+    width: calc((100% - 64px) / 3);
+  }
+}
+
+@media (min-width: 1024px) {
+  .list {
+    gap: 32px;
+  }
+  .listItem {
+    width: calc((100% - 96px) / 4);
+  }
+}
+
+@media (min-width: 1440px) {
+  .image {
+    min-width: 250px;
+  }
+}
+/* .list {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -37,9 +118,4 @@
   height: 200px;
   margin: 90px auto 0px auto;
   border-radius: 10px;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
+} */

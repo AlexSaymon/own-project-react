@@ -157,7 +157,7 @@
 
 @media (min-width: 320px) {
   .image {
-    max-width: 330px;
+    max-width: 300px;
     margin: 0 auto;
   }
 
@@ -235,6 +235,7 @@
     text-align: left;
     margin: 0px 0px 44px 0px;
     max-width: 708px;
+    line-height: 2em;
   }
   .movieInfoItem {
     text-align: left;
@@ -272,7 +273,7 @@
   }
 
   .image {
-    min-width: 400px;
+    min-width: 350px;
     margin-right: 40px;
   }
 
@@ -306,135 +307,3 @@
     font-size: 20px;
   }
 }
-
-/* 
-
-.link:hover,
-.arrowIcon:hover {
-  background-color: #f00;
-}
-
-h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-}
-
-.list {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  margin-left: 30px;
-}
-
-.title {
-  margin-top: 40px;
-  margin-bottom: 67px;
-  color: #fff;
-  font-size: 34px;
-  font-weight: 600;
-}
-
-.genresWrapper {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-.genres {
-  border-radius: 10px;
-  background: #fff;
-  color: #000;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  padding: 10px;
-}
-
-.releaseDate {
-  display: flex;
-  align-items: center;
-}
-
-.runTime {
-  display: flex;
-  align-items: center;
-}
-
-.calendarIcon {
-  margin-right: 10px;
-  margin-left: 28px;
-}
-
-.userscore {
-  display: flex;
-  align-items: center;
-}
-
-.scoreIcon {
-  margin-right: 10px;
-  margin-left: 28px;
-}
-
-.image {
-  border-radius: 10px;
-  height: 500px;
-  margin: 10px 0px 10px 10px;
-}
-
-.overview {
-  color: #fff;
-  font-size: 16px;
-  line-height: 1.5em;
-  width: 708px;
-  margin-bottom: 44px;
-}
-
-.movieInfoWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.movieInfoItem {
-  color: #fff;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.additionalInfoTitle {
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  margin: 30px 0px;
-}
-
-.additionalInfo {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.additionalInfoSpan {
-  background-color: #f00;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.additionalInfoSpan:hover {
-  background-color: darkred;
-  animation: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.hd {
-  background-color: #f00;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.additionalInfoLink {
-  color: white;
-} */
