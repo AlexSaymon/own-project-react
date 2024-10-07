@@ -16,7 +16,7 @@ const Reviews = () => {
 
   return (
     <div>
-      {reviews.length > 1 ? (
+      {reviews.length > 0 ? (
         <ul className={s.list}>
           {reviews.map((review) => (
             <li className={s.listItem} key={review.id}>
