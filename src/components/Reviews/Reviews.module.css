@@ -5,8 +5,10 @@
 }
 
 .listItem {
+  color: white;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .authorTitle {
@@ -23,9 +25,11 @@
   margin-left: 30px;
   font-size: 13px;
   line-height: 20px;
+  margin-bottom: 15px;
 }
 
 .icon {
+  color: white;
   width: 25px;
   height: 25px;
   margin-right: 10px;
@@ -34,4 +38,9 @@
 .reviewContent {
   width: 90%;
   height: 50%;
+}
+
+.noReview {
+  color: white;
+  margin-bottom: 40px;
 }

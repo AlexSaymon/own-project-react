@@ -34,7 +34,7 @@ const Reviews = () => {
           ))}
         </ul>
       ) : (
-        <h2>There no reviews for that movie.</h2>
+        <h2 className={s.noReview}>There are no reviews for that movie.</h2>
       )}
     </div>
   );

@@ -3,6 +3,13 @@ html {
   background: #000;
 }
 
+html,
+body,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: "Inter", sans-serif;
   min-height: 100vh;

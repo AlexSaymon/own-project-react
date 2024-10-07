@@ -2,7 +2,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import { Link, Outlet, useParams, useLocation } from "react-router-dom";
 import { fetchMovieById } from "../../services/api";
 import s from "./MovieDetailsPage.module.css";
-import { GoArrowLeft, GoCalendar, GoHeart } from "react-icons/go";
+import { GoArrowLeft, GoCalendar, GoHeart, GoStopwatch } from "react-icons/go";
 import RunTime from "../../components/RunTime/RunTime";
 import Loader from "../../components/Loader/Loader";
 
@@ -16,7 +16,6 @@ const MovieDetailsPage = () => {
     const getData = async () => {
       const data = await fetchMovieById(movieId);
       setMovie(data);
-      console.log(data);
     };
 
     getData();
@@ -35,7 +34,7 @@ const MovieDetailsPage = () => {
 
   return (
     <div className={s.container}>
-      <Link className={s.link} to={goBackRef.current ?? "/movies"}>
+      <Link className={s.link} to={goBackRef.current ?? "/"}>
         <GoArrowLeft className={s.arrowIcon} />
         Go back
       </Link>
@@ -46,25 +45,30 @@ const MovieDetailsPage = () => {
         />
         <ul className={s.list}>
           <li className={s.title}>{movie.title}</li>
-          <div className={s.genresWrapper}>
-            {movie.genres.map((genre) => (
-              <li className={s.genres} key={genre.id}>
-                {genre.name}
+          <div className={s.movieInfoPcWrapper}>
+            <div className={s.genresWrapper}>
+              {movie.genres.map((genre) => (
+                <li className={s.genres} key={genre.id}>
+                  {genre.name}
+                </li>
+              ))}
+            </div>
+            <div className={s.movieDataWrapper}>
+              <li className={s.runTime}>
+                <GoStopwatch className={s.movieDataIcon} />
+                <RunTime movieTime={movie.runtime} />
               </li>
-            ))}
-            <li className={s.runTime}>
-              <GoCalendar className={s.calendarIcon} />
-              <RunTime movieTime={movie.runtime} />
-            </li>
-            <li className={s.releaseDate}>
-              <GoCalendar className={s.calendarIcon} />
-              <p>{releaseDate}</p>
-            </li>
-            <li className={s.userscore}>
-              <GoHeart className={s.scoreIcon} />
-              <p>Score: {userScore}%</p>
-            </li>
+              <li className={s.releaseDate}>
+                <GoCalendar className={s.movieDataIcon} />
+                <p>{releaseDate}</p>
+              </li>
+              <li className={s.userscore}>
+                <GoHeart className={s.movieDataIcon} />
+                <p>Score: {userScore}%</p>
+              </li>
+            </div>
           </div>
+
           <li>
             <p className={s.overview}>{movie.overview}</p>
           </li>
@@ -88,16 +92,18 @@ const MovieDetailsPage = () => {
           </div>
         </ul>
       </div>
+      <h2 className={s.additionalInfoTitle}>Additonal information:</h2>
       <div className={s.additionalInfo}>
-        <h2 className={s.additionalInfoTitle}>Additonal information:</h2>
-        <Link className={s.castLink} to={`/movies/${movieId}/cast`}>
-          Cast
+        <Link className={s.additionalInfoLink} to={`/movies/${movieId}/cast`}>
+          <span className={s.additionalInfoSpan}>Cast</span>
         </Link>
-        <Link to={`/movies/${movieId}/reviews`}>Reviews</Link>
-        <Suspense fallback={<h2>Loading...</h2>}>
-          <Outlet />
-        </Suspense>
+        <Link className={s.additionalInfoLink} to={`/movies/${movieId}/reviews`}>
+          <span className={s.additionalInfoSpan}>Reviews</span>
+        </Link>
       </div>
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

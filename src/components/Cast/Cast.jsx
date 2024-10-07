@@ -15,7 +15,7 @@ const Cast = () => {
   }, [movieId]);
 
   return (
-    <div>
+    <div className={s.container}>
       <Suspense fallback={<h2>Loading...</h2>}>
         <ul className={s.list}>
           {credits.map((credit) => (
@@ -27,18 +27,17 @@ const Cast = () => {
                   alt={credit.name}
                 />
               ) : (
-                <h2>No image for this actor</h2>
+                <h2 className={s.noImage}>No image for this actor</h2>
               )}
-              <h2 className={s.creditName}>{credit.name}</h2>
+              <div className={s.creditInfo}>
+                <h2 className={s.creditName}>{credit.name}</h2>
 
-              {credit.character ? (
-                <span className={s.character}>
-                  <h2 className={s.characterDescription}>Character:</h2>{" "}
-                  {credit.character}
-                </span>
-              ) : (
-                <h2>Support actor</h2>
-              )}
+                {credit.character ? (
+                  <span className={s.character}>{credit.character}</span>
+                ) : (
+                  <h2>Support actor</h2>
+                )}
+              </div>
             </li>
           ))}
         </ul>

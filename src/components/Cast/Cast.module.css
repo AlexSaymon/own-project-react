@@ -1,32 +1,45 @@
-.image {
-  width: 7%;
-  height: 7%;
-}
-
 .list {
   list-style-type: none;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .listItem {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.creditInfoWrapper {
+  width: calc((100% - 96px) / 3);
+  color: white;
   display: flex;
   flex-direction: column;
 }
 
-.character {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 15px;
+.creditInfo {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
-.characterDescription {
-  font-size: 15px;
+.creditName {
+  margin-bottom: 10px;
+}
+
+.image {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.noImage {
+  text-align: center;
+  width: 150px;
+  height: 200px;
+  margin: 90px auto 0px auto;
+  border-radius: 10px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
